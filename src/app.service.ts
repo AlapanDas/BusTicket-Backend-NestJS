@@ -17,9 +17,9 @@ export class AppService {
   async getUser(response: userLogin): Promise<user> {
    
     const supabase = createClient(process.env.URL, process.env.KEY);
-
+    console.log("Login Hit !!",response);
     const { data, error } = await supabase.from('user_user').select('*').eq('username', response.username);
-
+    
     if (error || !data || data.length === 0) {
       return { status: false, username: "", email: "Error in the Request", access_token: "error", isAdmin: false }; // Return error response if there's an issue or no data found
     }

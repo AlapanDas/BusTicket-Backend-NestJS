@@ -13,6 +13,7 @@ export class AppController {
 
   @Post('/login')
   async getUser(@Body() userData: userLogin): Promise<user> {
+    console.log(userData.username,userData.password);
     return await this.appService.getUser(userData);
   }
 }
