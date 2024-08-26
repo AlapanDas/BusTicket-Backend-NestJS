@@ -15,7 +15,7 @@ WORKDIR /app
 COPY --from=builder /app /app
 
 # Expose the port
-EXPOSE 3000
+EXPOSE 3030
 
 # Start the server
 CMD ["node", "dist/main.js"]
