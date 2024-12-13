@@ -8,7 +8,7 @@ import { AuthService } from './auth/auth.service';
 @Module({
   imports: [ConfigModule.forRoot(),
     JwtModule.register({
-      secret:'blackcat@69',
+      secret:'{SECRET}',
       signOptions:{expiresIn:'12h'},
     }),
   ],
